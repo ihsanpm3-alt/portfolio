@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ihsan Mohammed P M — Digital Marketing Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A2B4A;
+    --navy-light: #243860;
+    --navy-dark: #111D33;
+    --gold: #C9933A;
+    --gold-light: #E8B96A;
+    --cream: #F8F6F1;
+    --white: #FFFFFF;
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
+    --green: #15803D;
+    --green-light: #DCFCE7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--gray-900);
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,43,74,0.97);
+    backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 3rem; height: 60px;
+    border-bottom: 1px solid rgba(201,147,58,0.2);
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700; font-size: 16px;
+    color: var(--white); letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a {
+    font-size: 13px; font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none; letter-spacing: 0.04em;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 100px 3rem 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,147,58,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .hero-inner { max-width: 900px; }
+  .hero-label {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .hero-label::before {
+    content: ''; display: block;
+    width: 32px; height: 1px; background: var(--gold);
+  }
+  .hero-name {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(48px, 8vw, 88px);
+    font-weight: 800; line-height: 0.95;
+    color: var(--white); letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: 400; color: var(--gold-light);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  .hero-bio {
+    font-size: 16px; font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    max-width: 580px; line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+  .hero-contacts {
+    display: flex; flex-wrap: wrap; gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  .hero-contact-item {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 13px; color: rgba(255,255,255,0.6);
+    font-weight: 400;
+  }
+  .hero-contact-item .dot {
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+  .hero-contact-item a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .hero-contact-item a:hover { color: var(--gold); }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .hero-tag {
+    font-size: 11px; font-weight: 500;
+    padding: 5px 14px; border-radius: 20px;
+    border: 1px solid rgba(201,147,58,0.3);
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .hero-scroll {
+    position: absolute; bottom: 2rem; right: 3rem;
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    display: flex; align-items: center; gap: 0.5rem;
+    writing-mode: vertical-rl;
+  }
+
+  /* SECTIONS */
+  section { padding: 80px 3rem; }
+  .section-inner { max-width: 960px; margin: 0 auto; }
+  .section-header { margin-bottom: 3rem; }
+  .section-label-top {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .section-label-top::before {
+    content: ''; width: 24px; height: 1px; background: var(--gold);
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700; color: var(--navy);
+    line-height: 1.1; letter-spacing: -0.02em;
+  }
+
+  /* ABOUT */
+  #about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stat-box {
+    background: var(--navy);
+    border-radius: 12px; padding: 1.5rem;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px; font-weight: 800;
+    color: var(--gold); line-height: 1;
+  }
+  .stat-label {
+    font-size: 11px; font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-top: 0.4rem;
+  }
+  .about-text p {
+    font-size: 15px; line-height: 1.9;
+    color: var(--gray-700); margin-bottom: 1rem;
+    font-weight: 300;
+  }
+  .about-focus {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    font-size: 14px; font-weight: 500;
+    color: var(--navy); line-height: 1.6;
+  }
+
+  /* SKILLS */
+  #skills { background: var(--cream); }
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+  .skill-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px; padding: 1.25rem 1.5rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .skill-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .skill-card-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px; font-weight: 600;
+    color: var(--navy); margin-bottom: 6px;
+  }
+  .skill-card-sub { font-size: 12px; color: var(--gray-500); line-height: 1.5; }
+  .tools-section { margin-top: 2rem; }
+  .tools-category { margin-bottom: 1.5rem; }
+  .tools-cat-label {
+    font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--gray-400); margin-bottom: 0.75rem;
+  }
+  .tools-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tool-tag {
+    font-size: 12px; font-weight: 500;
+    padding: 5px 14px; border-radius: 20px;
+    background: var(--white); border: 1px solid var(--gray-200);
+    color: var(--gray-700);
+  }
+
+  /* EXPERIENCE */
+  #experience { background: var(--navy); }
+  #experience .section-title { color: var(--white); }
+  .exp-timeline { position: relative; }
+  .exp-timeline::before {
+    content: ''; position: absolute;
+    left: 0; top: 8px; bottom: 0;
+    width: 1px; background: rgba(201,147,58,0.3);
+  }
+  .exp-item { padding-left: 2rem; margin-bottom: 3rem; position: relative; }
+  .exp-item::before {
+    content: ''; position: absolute;
+    left: -4px; top: 8px;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,147,58,0.2);
+  }
+  .exp-period {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.5rem;
+  }
+  .exp-role {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--white); margin-bottom: 4px;
+  }
+  .exp-company {
+    font-size: 14px; color: rgba(255,255,255,0.5);
+    margin-bottom: 1rem;
+  }
+  .exp-points { list-style: none; }
+  .exp-points li {
+    font-size: 14px; font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    padding: 4px 0 4px 1.25rem;
+    position: relative; line-height: 1.6;
+  }
+  .exp-points li::before {
+    content: '→'; position: absolute;
+    left: 0; color: var(--gold); font-size: 12px;
+    top: 5px;
+  }
+
+  /* PROJECTS */
+  #projects { background: var(--white); }
+  .projects-grid { display: grid; gap: 2rem; }
+  .project-card {
+    border: 1px solid var(--gray-200);
+    border-radius: 16px; overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .project-card:hover {
+    border-color: var(--navy);
+    box-shadow: 0 8px 32px rgba(26,43,74,0.08);
+  }
+  .project-header {
+    background: var(--navy);
+    padding: 1.5rem 2rem;
+    display: flex; align-items: flex-start;
+    justify-content: space-between; gap: 1rem;
+  }
+  .project-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 48px; font-weight: 800;
+    color: rgba(255,255,255,0.08);
+    line-height: 1; flex-shrink: 0;
+    margin-right: 1rem;
+  }
+  .project-header-text { flex: 1; }
+  .project-type {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 6px;
+  }
+  .project-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--white); line-height: 1.2;
+  }
+  .project-company {
+    font-size: 13px; color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+  }
+  .project-badge {
+    font-size: 11px; font-weight: 600;
+    padding: 4px 12px; border-radius: 20px;
+    flex-shrink: 0; align-self: flex-start;
+    margin-top: 4px;
+  }
+  .badge-practice {
+    background: rgba(201,147,58,0.15);
+    color: var(--gold-light);
+    border: 1px solid rgba(201,147,58,0.3);
+  }
+  .badge-real {
+    background: rgba(21,128,61,0.15);
+    color: #86EFAC;
+    border: 1px solid rgba(21,128,61,0.3);
+  }
+  .project-body { padding: 2rem; }
+  .project-meta {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .project-meta-item { }
+  .project-meta-label {
+    font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--gray-400); margin-bottom: 4px;
+  }
+  .project-meta-value {
+    font-size: 13px; font-weight: 500;
+    color: var(--navy);
+  }
+  .project-sections { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .project-section-title {
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--gold); margin-bottom: 0.75rem;
+  }
+  .project-list { list-style: none; }
+  .project-list li {
+    font-size: 13px; font-weight: 400;
+    color: var(--gray-700); padding: 3px 0 3px 1rem;
+    position: relative; line-height: 1.5;
+  }
+  .project-list li::before {
+    content: '·'; position: absolute;
+    left: 0; color: var(--gold); font-size: 16px;
+    line-height: 1.2;
+  }
+  .project-findings {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: var(--gray-50);
+    border-radius: 10px;
+    grid-column: 1 / -1;
+  }
+  .finding-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  .finding-item { text-align: center; }
+  .finding-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px; font-weight: 800;
+    color: var(--navy); line-height: 1;
+  }
+  .finding-label {
+    font-size: 11px; color: var(--gray-500);
+    margin-top: 3px; line-height: 1.3;
+  }
+  .tools-used { margin-top: 1.5rem; grid-column: 1 / -1; }
+  .tool-pill {
+    display: inline-block;
+    font-size: 11px; font-weight: 500;
+    padding: 4px 12px; border-radius: 20px;
+    background: var(--navy); color: rgba(255,255,255,0.8);
+    margin: 3px;
+  }
+
+  /* PLACEHOLDER PROJECTS */
+  .project-placeholder {
+    border: 2px dashed var(--gray-200);
+    border-radius: 16px; padding: 2.5rem 2rem;
+    display: flex; align-items: center;
+    gap: 2rem; transition: border-color 0.2s;
+  }
+  .project-placeholder:hover { border-color: var(--gray-300); }
+  .placeholder-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 48px; font-weight: 800;
+    color: var(--gray-200); flex-shrink: 0;
+    line-height: 1;
+  }
+  .placeholder-text { }
+  .placeholder-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--gray-300); margin-bottom: 6px;
+  }
+  .placeholder-sub { font-size: 13px; color: var(--gray-400); }
+  .coming-soon-badge {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 20px;
+    border: 1px dashed var(--gray-300);
+    color: var(--gray-400); margin-top: 0.75rem;
+    display: inline-block;
+  }
+
+  /* CERTIFICATIONS */
+  #certifications { background: var(--cream); }
+  .cert-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .cert-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px; padding: 1.25rem 1.5rem;
+    display: flex; align-items: flex-start; gap: 1rem;
+    transition: border-color 0.2s;
+  }
+  .cert-card:hover { border-color: var(--gold); }
+  .cert-card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, #FFFBF2, var(--white));
+    grid-column: 1 / -1;
+  }
+  .cert-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
+    background: var(--navy);
+  }
+  .cert-icon.gold-bg { background: var(--gold); }
+  .cert-name {
+    font-size: 14px; font-weight: 600;
+    color: var(--navy); margin-bottom: 3px;
+  }
+  .cert-issuer { font-size: 12px; color: var(--gray-500); }
+  .cert-year {
+    margin-left: auto; flex-shrink: 0;
+    font-size: 12px; font-weight: 500;
+    color: var(--gray-400);
+  }
+  .cert-verified {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--green); background: var(--green-light);
+    padding: 2px 8px; border-radius: 10px;
+    margin-top: 4px; display: inline-block;
+  }
+
+  /* CONTACT */
+  #contact {
+    background: var(--navy-dark);
+    text-align: center;
+  }
+  #contact .section-title { color: var(--white); margin-bottom: 0.5rem; }
+  .contact-sub {
+    font-size: 15px; font-weight: 300;
+    color: rgba(255,255,255,0.5); margin-bottom: 3rem;
+    max-width: 480px; margin-left: auto; margin-right: auto;
+    margin-top: 1rem;
+  }
+  .contact-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; max-width: 500px; margin: 0 auto 3rem;
+  }
+  .contact-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: 1.25rem;
+    transition: border-color 0.2s;
+  }
+  .contact-item:hover { border-color: rgba(201,147,58,0.4); }
+  .contact-item-label {
+    font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--gold); margin-bottom: 6px;
+  }
+  .contact-item-value {
+    font-size: 13px; color: rgba(255,255,255,0.7);
+    font-weight: 400;
+  }
+  .contact-item-value a { color: inherit; text-decoration: none; }
+  .contact-footer {
+    font-size: 12px; color: rgba(255,255,255,0.25);
+    margin-top: 3rem; letter-spacing: 0.05em;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { gap: 1rem; }
+    .nav-links a { font-size: 11px; }
+    section { padding: 60px 1.5rem; }
+    .hero { padding: 100px 1.5rem 60px; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    .project-meta { grid-template-columns: repeat(2, 1fr); }
+    .project-sections { grid-template-columns: 1fr; }
+    .finding-grid { grid-template-columns: repeat(2, 1fr); }
+    .cert-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-label { animation: fadeUp 0.6s ease 0.1s both; }
+  .hero-name { animation: fadeUp 0.6s ease 0.2s both; }
+  .hero-title { animation: fadeUp 0.6s ease 0.3s both; }
+  .hero-bio { animation: fadeUp 0.6s ease 0.4s both; }
+  .hero-contacts { animation: fadeUp 0.6s ease 0.5s both; }
+  .hero-tags { animation: fadeUp 0.6s ease 0.6s both; }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">Ihsan <span>P M</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-label">Digital Marketing Portfolio · 2026</div>
+    <div class="hero-name">Ihsan<br>Mohammed<br>P M</div>
+    <div class="hero-title">Digital Marketing Executive</div>
+    <div class="hero-bio">
+      Performance marketing professional with hands-on experience in SEO, Google Ads, Meta Ads, GA4, and campaign analytics. Focused on data-driven strategies that generate measurable results — more visibility, more traffic, more leads.
+    </div>
+    <div class="hero-contacts">
+      <div class="hero-contact-item">
+        <div class="dot"></div>
+        <span>+91 8606032321</span>
+      </div>
+      <div class="hero-contact-item">
+        <div class="dot"></div>
+        <span>ihsanpm3@gmail.com</span>
+      </div>
+      <div class="hero-contact-item">
+        <div class="dot"></div>
+        <a href="https://linkedin.com/in/ihsan-p-m-2a595329a" target="_blank">LinkedIn Profile</a>
+      </div>
+      <div class="hero-contact-item">
+        <div class="dot"></div>
+        <span>Thrissur, Kerala</span>
+      </div>
+    </div>
+    <div class="hero-tags">
+      <div class="hero-tag">SEO</div>
+      <div class="hero-tag">Google Ads</div>
+      <div class="hero-tag">Meta Ads</div>
+      <div class="hero-tag">GA4</div>
+      <div class="hero-tag">Performance Marketing</div>
+      <div class="hero-tag">Campaign Analytics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label-top">About</div>
+      <div class="section-title">Who I Am</div>
+    </div>
+    <div class="about-grid">
+      <div>
+        <div class="about-stats">
+          <div class="stat-box">
+            <div class="stat-num">2+</div>
+            <div class="stat-label">Internships completed</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Portfolio projects built</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Tools & platforms</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Certifications earned</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p>
+          I am a Digital Marketing Executive from Thrissur, Kerala with practical experience in SEO, paid advertising, and marketing analytics. My journey includes internships at GALTech Technologies and TripleDe Technologies, where I worked across Google Ads, Meta Ads, GA4, Google Tag Manager, social media, email, and WhatsApp marketing.
+        </p>
+        <p>
+          I hold a Bachelor of Business Administration (BBA) from Suresh Gyan Vihar University and a Google Ads Search Certification from Google Skillshop. My portfolio projects — an SEO audit, blog content creation, and a Google Ads campaign strategy — were all built using real business data and industry-standard tools.
+        </p>
+        <div class="about-focus">
+          Career goal: Performance Marketing & SEO within a structured, growth-oriented organisation — focused on paid media, campaign analytics, and data-driven digital strategy.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label-top">Skills</div>
+      <div class="section-title">What I Work With</div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-name">Google Ads</div>
+        <div class="skill-card-sub">Search campaigns · Keyword research · Audience targeting · Bidding strategy · RSA copywriting</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">Meta Ads</div>
+        <div class="skill-card-sub">Facebook & Instagram campaigns · Audience segmentation · Ad formats · Campaign monitoring</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">SEO</div>
+        <div class="skill-card-sub">On-Page · Off-Page · Technical basics · Keyword research · Content optimization</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">Analytics & Reporting</div>
+        <div class="skill-card-sub">GA4 · Google Search Console · GTM · Campaign KPI tracking · Hotjar</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">Paid Advertising</div>
+        <div class="skill-card-sub">Campaign setup · Ad structuring · Performance tracking · PPC workflows · Remarketing basics</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">Social Media Marketing</div>
+        <div class="skill-card-sub">Content planning · Scheduling · Engagement · Brand visibility</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">Email & WhatsApp Marketing</div>
+        <div class="skill-card-sub">Campaign execution · Scheduling · Performance tracking · Customer outreach</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">E-Commerce Marketing</div>
+        <div class="skill-card-sub">Shopify · WooCommerce · Product optimization · Basic store management</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">Content & Design</div>
+        <div class="skill-card-sub">SEO content writing · Social creatives · Canva · Photoshop · Illustrator</div>
+      </div>
+    </div>
+
+    <div class="tools-section">
+      <div class="tools-category">
+        <div class="tools-cat-label">Advertising & Analytics</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Google Ads Manager</span>
+          <span class="tool-tag">Meta Ads Manager</span>
+          <span class="tool-tag">Facebook Business Suite</span>
+          <span class="tool-tag">Google Analytics 4 (GA4)</span>
+          <span class="tool-tag">Google Tag Manager (GTM)</span>
+          <span class="tool-tag">Google Search Console</span>
+          <span class="tool-tag">Hotjar</span>
+          <span class="tool-tag">Google Trends</span>
+        </div>
+      </div>
+      <div class="tools-category">
+        <div class="tools-cat-label">SEO & Research</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Google Keyword Planner</span>
+          <span class="tool-tag">Ubersuggest</span>
+          <span class="tool-tag">Ahrefs (Free)</span>
+          <span class="tool-tag">Screaming Frog</span>
+          <span class="tool-tag">Answer the Public</span>
+          <span class="tool-tag">People Also Ask</span>
+        </div>
+      </div>
+      <div class="tools-category">
+        <div class="tools-cat-label">Marketing Platforms</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Mailercloud</span>
+          <span class="tool-tag">Mailchimp</span>
+          <span class="tool-tag">Libromi Connect</span>
+          <span class="tool-tag">Shopify</span>
+          <span class="tool-tag">WooCommerce</span>
+        </div>
+      </div>
+      <div class="tools-category">
+        <div class="tools-cat-label">Design</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Canva</span>
+          <span class="tool-tag">Adobe Photoshop</span>
+          <span class="tool-tag">Adobe Illustrator</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label-top" style="color:var(--gold);">Experience</div>
+      <div class="section-title">Work History</div>
+    </div>
+    <div class="exp-timeline">
+
+      <div class="exp-item">
+        <div class="exp-period">Jan 2026 – Mar 2026</div>
+        <div class="exp-role">Trainee Marketing Coordinator</div>
+        <div class="exp-company">TripleDe Technologies Pvt. Ltd · Infopark Koratty, Thrissur</div>
+        <ul class="exp-points">
+          <li>Supported day-to-day digital marketing across the company's online channels</li>
+          <li>Assisted in digital advertising campaign execution and monitoring under supervision</li>
+          <li>Tracked campaign performance metrics and supported KPI reporting</li>
+          <li>Managed and scheduled social media content for brand visibility and engagement</li>
+          <li>Assisted in email marketing campaign execution, scheduling, and performance tracking</li>
+          <li>Supported WhatsApp marketing for promotional communication and customer outreach</li>
+          <li>Coordinated content planning and campaign execution across multiple channels</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">Aug 2025 – Nov 2025</div>
+        <div class="exp-role">Digital Marketing Intern</div>
+        <div class="exp-company">GALTech Technologies Pvt. Ltd · Infopark Koratty, Thrissur</div>
+        <ul class="exp-points">
+          <li>Contributed to Google Ads and Meta Ads campaign setup — keyword research, audience targeting, structuring, and configuration</li>
+          <li>Gained practical exposure to PPC workflows, ad formats, bidding concepts, and remarketing</li>
+          <li>Performed on-page SEO — meta titles, descriptions, heading optimization, keyword placement, internal linking, image optimization</li>
+          <li>Supported technical SEO — indexing checks, sitemap review, crawl monitoring using Google Search Console</li>
+          <li>Assisted with off-page SEO — backlink research, directory submissions, link-building support</li>
+          <li>Used GA4, GTM, Google Search Console, and Hotjar to monitor website performance and user behavior</li>
+          <li>Supported social media marketing and content planning for brand visibility</li>
+          <li>Assisted with e-commerce marketing support for Shopify and WooCommerce platforms</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">Jan 2025 – Mar 2025</div>
+        <div class="exp-role">Graphic Design Intern</div>
+        <div class="exp-company">Nerdymonks · Irinjalakuda</div>
+        <ul class="exp-points">
+          <li>Designed social media creatives and marketing visuals using Photoshop and Illustrator</li>
+          <li>Created brand-aligned visual content for digital marketing campaigns</li>
+          <li>Developed multiple creative variations for social media posts and promotional materials</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label-top">Projects</div>
+      <div class="section-title">Portfolio Work</div>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num">01</div>
+          <div class="project-header-text">
+            <div class="project-type">SEO Audit</div>
+            <div class="project-title">Full Website SEO Audit — MoveonLeisure.com</div>
+            <div class="project-company">MoveonLeisure & Travels (India) Pvt. Ltd · Thrissur Travel Agency · Est. 2008</div>
+          </div>
+          <div class="project-badge badge-practice">Self-Initiated</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <div class="project-meta-item">
+              <div class="project-meta-label">Objective</div>
+              <div class="project-meta-value">Identify SEO gaps limiting organic growth</div>
+            </div>
+            <div class="project-meta-item">
+              <div class="project-meta-label">Pages Crawled</div>
+              <div class="project-meta-value">109 pages</div>
+            </div>
+            <div class="project-meta-item">
+              <div class="project-meta-label">Mobile PageSpeed</div>
+              <div class="project-meta-value" style="color:#DC2626;">35 / 100</div>
+            </div>
+            <div class="project-meta-item">
+              <div class="project-meta-label">Desktop PageSpeed</div>
+              <div class="project-meta-value" style="color:#DC2626;">11 / 100</div>
+            </div>
+          </div>
+
+          <div class="project-sections">
+            <div>
+              <div class="project-section-title">Key Issues Found</div>
+              <ul class="project-list">
+                <li>Meta descriptions missing on 91.74% of pages (100/109)</li>
+                <li>Multiple H1 tags on 68.81% of pages — confuses Google</li>
+                <li>Images missing alt text on 85.43% of pages</li>
+                <li>Oversized images (100KB+) across 76% of site — causing slow load</li>
+                <li>Desktop PageSpeed 11/100 — worse than mobile (unusual, indicates JS issue)</li>
+                <li>Largest Contentful Paint: 27.2s on mobile — 10x above Google threshold</li>
+                <li>Broken internal link (404 error) and HTTP URL detected</li>
+                <li>Toxic backlinks from Russian spam domains — possible past hack</li>
+              </ul>
+            </div>
+            <div>
+              <div class="project-section-title">Recommendations Made</div>
+              <ul class="project-list">
+                <li>Write unique meta descriptions for all 109 pages</li>
+                <li>Fix H1 structure — one unique, keyword-rich H1 per page</li>
+                <li>Compress all images using TinyPNG + convert to WebP format</li>
+                <li>Add descriptive keyword-rich alt text to all images</li>
+                <li>Submit toxic backlink disavow file via Google Search Console</li>
+                <li>Investigate and clean hacked /files/ directory on server</li>
+                <li>Target "travel agents thrissur" (KD 12, 1,300/mo) — quick win keyword</li>
+                <li>Fix broken link, HTTP URL, and multiple body tag errors</li>
+              </ul>
+            </div>
+
+            <div class="project-findings">
+              <div class="project-section-title">Audit Highlights</div>
+              <div class="finding-grid">
+                <div class="finding-item">
+                  <div class="finding-num">42</div>
+                  <div class="finding-label">Issue types identified</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-num">196</div>
+                  <div class="finding-label">Monthly organic visitors (current)</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-num">1,300+</div>
+                  <div class="finding-label">Monthly searches for top target keyword</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-num">1,000+</div>
+                  <div class="finding-label">Projected monthly visitors post-fix</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tools-used">
+              <div class="project-section-title">Tools Used</div>
+              <span class="tool-pill">Screaming Frog</span>
+              <span class="tool-pill">Google PageSpeed Insights</span>
+              <span class="tool-pill">Ubersuggest</span>
+              <span class="tool-pill">Google Keyword Planner</span>
+              <span class="tool-pill">Ahrefs Free Tools</span>
+              <span class="tool-pill">Google Search Console</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num">02</div>
+          <div class="project-header-text">
+            <div class="project-type">SEO Content Creation</div>
+            <div class="project-title">SEO Blog Content — M A Q Computer Services LLC</div>
+            <div class="project-company">M A Q Computer Services LLC · Dubai-based Software Development & Digital Agency</div>
+          </div>
+          <div class="project-badge badge-real">Internship Work</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <div class="project-meta-item">
+              <div class="project-meta-label">Deliverable</div>
+              <div class="project-meta-value">4 SEO-optimised blogs</div>
+            </div>
+            <div class="project-meta-item">
+              <div class="project-meta-label">Target Market</div>
+              <div class="project-meta-value">Dubai businesses</div>
+            </div>
+            <div class="project-meta-item">
+              <div class="project-meta-label">Keyword Intent</div>
+              <div class="project-meta-value">High-intent / Transactional</div>
+            </div>
+            <div class="project-meta-item">
+              <div class="project-meta-label">Internal Links</div>
+              <div class="project-meta-value">4 service pages linked</div>
+            </div>
+          </div>
+
+          <div class="project-sections">
+            <div>
+              <div class="project-section-title">Blogs Created</div>
+              <ul class="project-list">
+                <li>How Much Does It Cost to Design a Website in Dubai? — Target: website design cost Dubai</li>
+                <li>What Is SEO and Why Does Your Dubai Business Need It? — Target: SEO services Dubai</li>
+                <li>Best Digital Marketing Agency Dubai for Business Growth — Target: digital marketing agency Dubai</li>
+                <li>How Much Does Mobile App Development Cost in Dubai? — Target: mobile app development cost Dubai</li>
+              </ul>
+            </div>
+            <div>
+              <div class="project-section-title">SEO Elements Applied to Each Blog</div>
+              <ul class="project-list">
+                <li>Meta title — keyword + brand + year, under 60 characters</li>
+                <li>Meta description — keyword + value prop + CTA, under 160 characters</li>
+                <li>SEO-friendly URL slug for each post</li>
+                <li>H1 → H2 → H3 heading hierarchy with keywords</li>
+                <li>Keyword placed naturally in first paragraph</li>
+                <li>4 keyword-rich image alt texts per blog</li>
+                <li>Internal link to relevant MAQ service page</li>
+                <li>FAQ section optimised for Google featured snippets</li>
+              </ul>
+            </div>
+
+            <div class="project-findings">
+              <div class="project-section-title">Keyword Research Summary</div>
+              <div class="finding-grid">
+                <div class="finding-item">
+                  <div class="finding-num">4</div>
+                  <div class="finding-label">Research tools used</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-num">High</div>
+                  <div class="finding-label">All keywords: buyer intent</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-num">4</div>
+                  <div class="finding-label">Service pages internally linked</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-num">100%</div>
+                  <div class="finding-label">On-page elements covered</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tools-used">
+              <div class="project-section-title">Tools Used</div>
+              <span class="tool-pill">Google Keyword Planner</span>
+              <span class="tool-pill">Ubersuggest</span>
+              <span class="tool-pill">People Also Ask</span>
+              <span class="tool-pill">Answer the Public</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num">03</div>
+          <div class="project-header-text">
+            <div class="project-type">Google Ads Campaign Strategy</div>
+            <div class="project-title">Lead Generation Campaign — Mindstory Digital Agency</div>
+            <div class="project-company">Mindstory Digital Marketing Agency · Thrissur & Kochi, Kerala · Full-service agency</div>
+          </div>
+          <div class="project-badge badge-practice">Mock Campaign</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <div class="project-meta-item">
+              <div class="project-meta-label">Monthly Budget</div>
+              <div class="project-meta-value">₹25,000/month</div>
+            </div>
+            <div class="project-meta-item">
+              <div class="project-meta-label">Target Location</div>
+              <div class="project-meta-value">Kerala (state-wide)</div>
+            </div>
+            <div class="project-meta-item">
+              <div class="project-meta-label">Ad Groups Built</div>
+              <div class="project-meta-value">4 ad groups</div>
+            </div>
+            <div class="project-meta-item">
+              <div class="project-meta-label">Est. Monthly Leads</div>
+              <div class="project-meta-value" style="color:#15803D;">18–21 leads</div>
+            </div>
+          </div>
+
+          <div class="project-sections">
+            <div>
+              <div class="project-section-title">Campaign Structure</div>
+              <ul class="project-list">
+                <li>Ad Group 1: Core Agency — digital marketing agency kerala/thrissur/kochi (₹12,000)</li>
+                <li>Ad Group 2: SEO Services — seo services kerala, seo companies kerala (₹7,000)</li>
+                <li>Ad Group 3: Social Media — social media marketing agency kerala (₹4,000)</li>
+                <li>Ad Group 4: Branding & Web — branding agency kerala, web design thrissur (₹2,000)</li>
+                <li>Bid +20% in Thrissur & Ernakulam districts (office locations)</li>
+                <li>Phased bidding: Maximise Clicks → Target CPA → Target ROAS</li>
+              </ul>
+            </div>
+            <div>
+              <div class="project-section-title">Strategy Highlights</div>
+              <ul class="project-list">
+                <li>18 keywords selected based on CPC data — 6 low-intent keywords dropped</li>
+                <li>Responsive Search Ads with 10–12 headlines per ad group</li>
+                <li>Lead form asset — captures leads directly inside Google ad</li>
+                <li>Dual office location assets — Thrissur + Kochi offices</li>
+                <li>18 negative keywords to protect budget from student/job searches</li>
+                <li>Conversion tracking plan — form submissions, call clicks, WhatsApp clicks</li>
+                <li>Message match — each ad group linked to its specific service page</li>
+                <li>4-week optimisation plan from Day 1 to end of month</li>
+              </ul>
+            </div>
+
+            <div class="project-findings">
+              <div class="project-section-title">Projected Campaign Performance</div>
+              <div class="finding-grid">
+                <div class="finding-item">
+                  <div class="finding-num">~614</div>
+                  <div class="finding-label">Estimated monthly clicks</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-num">18–21</div>
+                  <div class="finding-label">Estimated leads per month</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-num">₹1,190</div>
+                  <div class="finding-label">Estimated cost per lead</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-num">+20%</div>
+                  <div class="finding-label">Bid boost near office locations</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tools-used">
+              <div class="project-section-title">Tools Used</div>
+              <span class="tool-pill">Google Keyword Planner</span>
+              <span class="tool-pill">Google Ads</span>
+              <span class="tool-pill">Google Tag Manager</span>
+              <span class="tool-pill">GA4</span>
+              <span class="tool-pill">Google Skillshop ✓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLACEHOLDER 4 -->
+      <div class="project-placeholder">
+        <div class="placeholder-num">04</div>
+        <div class="placeholder-text">
+          <div class="placeholder-title">Project Coming Soon</div>
+          <div class="placeholder-sub">Social Media Content Calendar & Strategy</div>
+          <div class="coming-soon-badge">In Progress</div>
+        </div>
+      </div>
+
+      <!-- PLACEHOLDER 5 -->
+      <div class="project-placeholder">
+        <div class="placeholder-num">05</div>
+        <div class="placeholder-text">
+          <div class="placeholder-title">Project Coming Soon</div>
+          <div class="placeholder-sub">GA4 Analytics Report & Insights</div>
+          <div class="coming-soon-badge">Upcoming</div>
+        </div>
+      </div>
+
+      <!-- PLACEHOLDER 6 -->
+      <div class="project-placeholder">
+        <div class="placeholder-num">06</div>
+        <div class="placeholder-text">
+          <div class="placeholder-title">Project Coming Soon</div>
+          <div class="placeholder-sub">Meta Ads Campaign Strategy</div>
+          <div class="coming-soon-badge">Upcoming</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label-top">Certifications</div>
+      <div class="section-title">Credentials</div>
+    </div>
+    <div class="cert-grid">
+
+      <div class="cert-card featured">
+        <div class="cert-icon gold-bg">🏆</div>
+        <div>
+          <div class="cert-name">Google Ads Search Certification</div>
+          <div class="cert-issuer">Google Skillshop — Verified by Google</div>
+          <div class="cert-verified">✓ Google Verified</div>
+        </div>
+        <div class="cert-year">2026</div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">📊</div>
+        <div>
+          <div class="cert-name">Digital Marketing Training & Internship</div>
+          <div class="cert-issuer">GALTech Technologies Pvt. Ltd</div>
+        </div>
+        <div class="cert-year">2025</div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">Digital Marketing Course Completion</div>
+          <div class="cert-issuer">GALTech School of Technology</div>
+        </div>
+        <div class="cert-year">2025</div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🎨</div>
+        <div>
+          <div class="cert-name">Graphic Design Internship Certificate</div>
+          <div class="cert-issuer">Nerdymonks, Irinjalakuda</div>
+        </div>
+        <div class="cert-year">2025</div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">✏️</div>
+        <div>
+          <div class="cert-name">Graphic Design Diploma</div>
+          <div class="cert-issuer">Dreamzone School of Creative Studies</div>
+        </div>
+        <div class="cert-year">2024</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label-top" style="color:var(--gold); justify-content:center;">Contact</div>
+    <div class="section-title" style="text-align:center;">Let's Connect</div>
+    <div class="contact-sub">
+      Open to opportunities in performance marketing, SEO, and digital campaign management across Kerala and beyond.
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-item-label">Phone</div>
+        <div class="contact-item-value">+91 8606032321</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Email</div>
+        <div class="contact-item-value">
+          <a href="mailto:ihsanpm3@gmail.com">ihsanpm3@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">LinkedIn</div>
+        <div class="contact-item-value">
+          <a href="https://linkedin.com/in/ihsan-p-m-2a595329a" target="_blank">linkedin.com/in/ihsan-p-m</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Location</div>
+        <div class="contact-item-value">Thrissur, Kerala, India</div>
+      </div>
+    </div>
+    <div class="contact-footer">
+      Ihsan Mohammed P M · Digital Marketing Executive · Portfolio 2026
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
